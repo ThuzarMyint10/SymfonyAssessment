@@ -1,0 +1,19 @@
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card w-50"> <!-- Responsive width -->
+        <div class="card-header">
+            <h5 class="card-title">Create new Product</h5>
+        </div>
+        <div class="card-body">
+            {{ form_start(form) }}
+                {% for field in form %}
+                    <div class="mb-3">
+                        {{ form_label(field) }}
+                        {{ form_widget(field) }}
+                        {{ form_errors(field) }}
+                    </div>
+                {% endfor %}
+                <button class="btn btn-primary">{{ button_label|default('Save') }}</button>
+            {{ form_end(form) }}
+        </div>
+    </div>
+</div>

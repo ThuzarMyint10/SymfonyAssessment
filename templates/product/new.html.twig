@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Product{% endblock %}
+
+{% block body %}
+    <div class="d-flex flex-column align-items-center">
+        {{ include('product/_form.html.twig') }}
+        <h3 class="mt-1"><a href="{{ path('app_product_index') }}">back to list</a></h3> <!-- mt-3 adds a margin-top -->
+    </div>
+{% endblock %}
+
